@@ -1,0 +1,67 @@
+@mixin core_viewport-toggler {
+	.viewport-toggler-toggle,
+	.viewport-toggler-toggle--open,
+	.viewport-toggler-toggle--close {
+		display: none;
+	}
+
+	.viewport-toggler-item {
+		display: block;
+	}
+
+	@if $viewport--toggler-supports-smartphone == true {
+		@include enable-viewport-toggler-for-viewport(
+			$viewport: 'smartphone',
+			$min-width: 0,
+			$max-width: $smartphone-max-width
+		);
+	}
+
+	@if $viewport--toggler-supports-phablet == true {
+		@include enable-viewport-toggler-for-viewport(
+			$viewport: 'phablet',
+			$min-width: $phablet-min-width,
+			$max-width: $phablet-max-width
+		);
+	}
+
+	@if $viewport--toggler-supports-tablet == true {
+		@include enable-viewport-toggler-for-viewport(
+			$viewport: 'tablet',
+			$min-width: $tablet-min-width,
+			$max-width: $tablet-max-width
+		);
+	}
+
+	@if $viewport--toggler-supports-tablet-landscape == true {
+		@include enable-viewport-toggler-for-viewport(
+			$viewport: 'tablet-landscape',
+			$min-width: $tablet-landscape-min-width,
+			$max-width: $tablet-landscape-max-width
+		);
+	}
+
+	@if $viewport--toggler-supports-desktop == true {
+		@include enable-viewport-toggler-for-viewport(
+			$viewport: 'desktop',
+			$min-width: $desktop-min-width,
+			$max-width: $desktop-max-width
+		);
+	}
+
+	@if $viewport--toggler-supports-widescreen == true {
+		@include enable-viewport-toggler-for-viewport(
+			$viewport: 'widescreen',
+			$min-width: $widescreen-min-width,
+			$max-width: $widescreen-max-width
+		);
+	}
+
+	@if $viewport--toggler-supports-highroller == true {
+		@include enable-viewport-toggler-for-viewport(
+			$viewport: 'highroller',
+			$min-width: $highroller-min-width,
+			$max-width: $highroller-max-width
+		);
+	}
+}

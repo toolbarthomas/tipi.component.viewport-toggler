@@ -1,0 +1,40 @@
+@mixin enable-viewport-toggler-for-viewport(
+	$viewport: false,
+	$min-width: 0,
+	$max-width: false
+) {
+	@if $viewport != false {
+		@include breakpoint($min-width, $max-width) {
+			.viewport-toggler--#{$viewport} {
+				&.__viewport-toggler--ready {
+					> .viewport-toggler-toggle {
+						display: block;
+
+						&.viewport-toggler-toggle--close {
+							display: none;
+						}
+					}
+
+					> .viewport-toggler-item {
+						display: none;
+					}
+
+					&.__viewport-toggler--active {
+						> .viewport-toggler-toggle {
+							&.viewport-toggler-toggle--open {
+								display: none;
+							}
+
+							&.viewport-toggler-toggle--close {
+								display: block;
+							}
+						}
+						> .viewport-toggler-item {
+							display: block;
+						}
+					}
+				}
+			}
+		}
+	}
+}
