@@ -58,7 +58,7 @@ function getViewportTogglerElement(origin, type, viewportTogglerElements) {
                 element = origin.parents('.' + viewportTogglerElements.root).first();
                 break;
             case 'toggle' :
-                element = origin.find('.' + viewportTogglerElements.toggle).first();
+                element = origin.find('.' + viewportTogglerElements.toggle);
                 break;
             case 'item' :
                 element = origin.find('.' + viewportTogglerElements.item).first();
