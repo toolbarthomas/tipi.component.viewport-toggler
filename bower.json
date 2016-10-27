@@ -1,0 +1,16 @@
+{
+  "name": "tipi.component.viewport-toggler",
+  "homepage": "https://github.com/toolbarthomas/tipi.component.viewport-toggler",
+  "authors": [
+    "Thomas van der Velde <contact@toolbarthomas.net>"
+  ],
+  "description": "Show or hide an element on a specific viewport",
+  "keywords": [
+    "toolbarthomas",
+    "modular",
+    "tipi",
+    "wordpress"
+  ],
+  "license": "MIT",
+  "main": "_tipi.component.viewport-toggler"
+}
