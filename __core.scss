@@ -64,4 +64,12 @@
 			$max-width: $highroller-max-width
 		);
 	}
+
+	@if $viewport--toggler-supports-highroller == true {
+		@include enable-viewport-toggler-for-viewport(
+			$viewport: 'global',
+			$min-width: false,
+			$max-width: false
+		);
+	}
 }
