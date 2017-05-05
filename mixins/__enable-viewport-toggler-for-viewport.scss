@@ -37,7 +37,7 @@
 			}
 
 			.viewport-toggler--#{$viewport} {
-				&.__viewport-toggler--flexible {
+				&.viewport-toggler--flexible {
 					&.__viewport-toggler--ready {
 						.viewport-toggler-toggle {
 							display: block;
